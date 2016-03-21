@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>事件列表的增删改查</title>
+	<script src="js/jquery-1.12.1.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="rdCtrl">
+	<div id="zuo">
+		<div id="title">
+			<h1>iCloud</h1>
+			<h2>提醒事项</h2>
+			<span ng-click="addItiem()"></span>
+		</div>
+		<ul id="list">
+			<li ng-repeat="value in liebiao track by $index"  ng-click="indexTime($index)">
+			    <span ng-class="value.color"></span>
+			    <input ng-model="value.name">
+			    <div id="list_open"></div>
+			    <div id="list_bottom"></div>
+			</li>
+		</ul>
+	</div>
+	<div id="you">
+	    <div class="sosuo">
+	    	<div>
+		    	<span></span>
+		    	<p>搜索所有提醒</p>
+		    	<input type="text" class="sosuo_left">
+	    	</div>
+	    </div>
+	    <div id="content">
+	    	<div class="content_title">
+	    		<div ng-class="liebiao[cindex].color">{{liebiao[cindex].name}}</div>
+	    		<div>选项</div>
+	    		<div class="thread" style="left:30px;"></div>
+	    	</div>
+	    	<div class="content_bottom">
+	    		<div id="dachen">
+	    			<span></span>
+	    			<span>已完成：0项</span>
+	    		</div>
+	    		<div class="reach"></div>
+	    	</div>
+	    	<div class="content-body">
+	    		<ul>
+	    			<li ng-repeat="value in liebiao[cindex].items track by $index">
+	    		  	<a href="" class="nav" ng-click="Projectreach($index)">
+	    		  		<span ng-class="value.color"></span>
+	    		  	</a>
+	    			  <input type="text" ng-model="value.name">
+	    				<a href="" ng-class="liebiao[cindex].color" ng-click="deleteject($index)">删除</a>
+	    				<div></div>
+	    		  </li>
+	    		</ul>
+	    		<div class="newProject">
+	    			<div class="thread"></div>
+				   	<p ng-click="addproject()">新项目...</p>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$('#list li').click(function(){
+			$('#list li').css('background','none')
+			$(this).css('background','rgba(0,0,0,0.2)');
+		})
+	})
+</script>
+</html>
+
+<!-- 避免排序出错要在ng-repeat 后面加track by $index 
+ng-model 同步页面修改内容
+
+ng-repeat="value in liebiao"
+-->

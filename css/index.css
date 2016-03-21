@@ -1,0 +1,334 @@
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family:'SFNSDisplay Light';
+	font-style:normal;
+	src:local('SFNSDisplay Light'), 
+	url("../fonts/SFNSDisplay-Light.woff") 
+	format("woff");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+input{
+	border: none;
+	background: none;
+	outline:none;
+}
+#zuo{
+	width: 389px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: #383836;
+	color: #fff;
+}
+#you{
+	background: #f5f5f5;
+	position: absolute;
+	left: 389px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#title{
+	width: 100%;
+	height: 45px;
+	display: inline-block;
+	border-bottom: 1px solid #1a1a1a;
+	line-height: 45px;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+#title h1{
+    float: left;
+    font-size: 21px;
+    margin-right: 10px;
+    
+}
+#title h2{
+	font-weight: 100;
+	color: #999;
+	font-size: 20px;
+	float: left;
+}
+#title span{
+	height: 23px;
+	width: 23px;
+	float: right;
+	font-size: 30px;
+	color: #999;
+	background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -96px -497px;
+	margin-top: 10px;
+}
+
+#list{
+	height: 50px;
+	font-size: 20px;
+	
+}
+#list li{
+	height: 44px;
+	line-height: 44px;
+	position: relative;
+	padding-left: 15px;
+}
+#list li span{
+	float: left;
+	display: block;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	top: 13px;
+	border-radius: 50%;
+}
+#list li input{
+	background:none; 
+	border: none;
+	width: auto;
+	position: absolute;
+	left: 45px;
+	top: 10px;
+	color: white;
+	font-size: 18px;
+	outline:none;
+}
+#list li #list_open{
+	width: 23px;
+	height: 23px;
+	background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -46px -526px;
+	position: absolute;
+	top:10px;
+	right: 10px;
+}
+#list_bottom{
+	height: 1px;
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	bottom: 0;
+	left: 45px;
+	right: 0;
+}
+.yellow{
+	color: #f7cd00;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -34px -571px;
+}
+.pink{
+	color: #cd76e2;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -18px -571px;
+}
+.blue{
+	color: #13aefa;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -68px -571px;
+}
+.red{
+	color: #ff2865;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -102px -571px;
+}
+.yellowgreen{
+	color: #64da39;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -86px -571px;
+}
+.orange{
+	color: #ff8000;
+    background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -52px -571px;
+}
+.sosuo{
+	width: 100%;
+	height: 45px;
+	border-bottom:1px solid rgba(128,128,128,0.35);
+	box-sizing: border-box;
+}
+.sosuo div{
+	width: 50%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+.sosuo div input{
+	width: 100%;
+    position: absolute;
+    right: 3px;
+    left: 45px;
+    top:0px;
+    bottom: 0px;
+    font-size: 20px;
+}
+.sosuo div p{
+	line-height: 44px;
+	position: absolute;
+	left: 45px;
+	top: 0;
+	bottom: 0;
+	color: rgba(0,0,0,0.3);
+	font-size: 20px;
+}
+.sosuo div span{
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 14px;
+	top: 10px;
+	background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -138px -359px;
+}
+#content{
+	width: 100%;
+	position: absolute;
+	top: 69px;
+	bottom: 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: #999;
+}
+.content_title{
+	height: 58px;
+	position: relative;
+	left: 0px;
+}
+.content_title div:nth-child(1){
+	height: 58px;
+	position: absolute;
+	left: 30px;
+	right: 200px;
+	font-size: 40px;
+	line-height: 60px;
+	background-image: none;
+}
+.content_title div:nth-child(2){
+	font-size: 20px;
+	position: absolute;
+	top: 25px;
+	right: 30px;
+}
+.content_bottom{
+	width: 100%;
+	position: relative;
+	left: 30px;
+}
+#dachen{
+	height: 52px;
+	widows: 100%;
+	border-bottom: 1px solid rgba(128,128,128,0.2);
+}
+#dachen span:nth-child(1){
+	display: block;
+	background-image: url(../image/packed-5.png);
+	background-repeat: no-repeat;
+	background-position: -92px -526px;
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	left: 11px;
+	top: 16px;
+}
+#dachen span:nth-child(2){
+	font-size: 20px;
+	color: #999;
+	position: absolute;
+	top: 16px;
+	left: 51px;
+}
+.newProject{
+	width: 100%;
+	height: 52px;
+	position: relative;
+}
+.thread{
+	position: absolute;
+	left: 81px;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background:rgba(128,128,128,0.2); 
+}
+.newProject p{
+	position: absolute;
+	left: 81px;
+	top: 15px;
+}
+.content-body ul li{
+	width: 100%;
+	height: 52px;
+	position: relative;
+}
+.content-body ul li div{
+	position: absolute;
+	left: 81px;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background:rgba(128,128,128,0.2); 
+}
+.content-body ul li input{
+	position: absolute;
+	left: 81px;
+	top: 15px;
+	font-size: 20px;
+}
+.content-body ul li a{
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	text-decoration: none;
+	background-image: none;
+}
+.content-body ul li span{
+	display: block;
+	width: 32px;
+	height: 32px;
+	
+}
+.content-body ul li .nav{
+	position: absolute;
+	top: 10px;
+	left: 36px;
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+.red-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: -128px -401px;
+}
+.yellow-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: -136px -267px;
+}
+.yellowgreen-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: -42px -359px;
+}
+.pink-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: -64px -465px;
+}
+.blue-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: -136px -167px;
+}
+.orange-nav{
+	background-image: url(../image/packed-5.png);
+	background-position: 0px -433px;
+}
