@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myapp">
 <head>
 	<meta charset="UTF-8">
-	<title>事件列表的增删改查</title>
+	<title>Angular-iCloud</title>
 	<script src="js/jquery-1.12.1.js"></script>
 	<script src="js/angular.js"></script>
 	<script src="js/index.js"></script>
@@ -18,8 +18,8 @@
 		<ul id="list">
 			<li ng-repeat="value in liebiao track by $index"  ng-click="indexTime($index)">
 			    <span ng-class="value.color"></span>
-			    <input ng-model="value.name">
-			    <div id="list_open"></div>
+			    <input ng-model="value.name" ng-keyup="storageName()">
+			    <div id="list_open" ng-click="deleteList($index)"></div>
 			    <div id="list_bottom"></div>
 			</li>
 		</ul>
@@ -40,18 +40,29 @@
 	    	</div>
 	    	<div class="content_bottom">
 	    		<div id="dachen">
-	    			<span></span>
-	    			<span>已完成：0项</span>
+	    			<span ng-click="openReach()"></span>
+	    			<span>已完成：{{liebiao[cindex].completeject.length}}项</span>
 	    		</div>
-	    		<div class="reach"></div>
+	    		<div class="reach" value="none">
+	    			<ul>
+	    				<li ng-repeat="value in liebiao[cindex].completeject track by $index">
+	    					<a href="" class="nav">
+	    						<span ng-class="value.color"></span>
+	    					</a>
+	    					<input type="text" ng-model="value.name">
+	    					<a href="" ng-class="liebiao[cindex].color" ng-click="deleteOpen($index)">删除</a>
+	    				<div></div>
+	    				</li>
+	    			</ul>
+	    		</div>
 	    	</div>
 	    	<div class="content-body">
 	    		<ul>
 	    			<li ng-repeat="value in liebiao[cindex].items track by $index">
-	    		  	<a href="" class="nav" ng-click="Projectreach($index)">
+	    		  	<a href="" class="nav" ng-click="Projectreach()">
 	    		  		<span ng-class="value.color"></span>
 	    		  	</a>
-	    			  <input type="text" ng-model="value.name">
+	    			  <input type="text" ng-model="value.name" ng-keyup="storageName()">
 	    				<a href="" ng-class="liebiao[cindex].color" ng-click="deleteject($index)">删除</a>
 	    				<div></div>
 	    		  </li>
@@ -74,8 +85,5 @@
 </script>
 </html>
 
-<!-- 避免排序出错要在ng-repeat 后面加track by $index 
-ng-model 同步页面修改内容
-
-ng-repeat="value in liebiao"
+<!-- 避免排序出错要在ng-repeat 后面加track by $index
 -->
